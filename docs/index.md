@@ -10,7 +10,7 @@ This site aims to be a comprehensive guide to CASino. We'll cover everything fro
 
 CASino is a simple Single sign-on server application. It supports the [CAS protocol](http://www.jasig.org/cas/protocol) and can therefore be used in combination with almost every web programming language out there.
 
-CAS is an authentication system originally created by Yale University to provide a trusted way for an application to authenticate a user. CAS <strong>centralizes</strong> authentication: It allows all your applications to ask users to login to a single sign-on server.<br />
+CAS is an authentication system originally created by Yale University to provide a trusted way for an application to authenticate a user. CAS **centralizes** authentication: It allows all your applications to ask users to login to a single sign-on server.<br />
 CAS became a [Jasig project](http://www.jasig.org/cas) in December 2004.
 
 ## Quick-start guide
