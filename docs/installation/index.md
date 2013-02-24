@@ -1,5 +1,5 @@
 ---
 layout: docs
 title: Installation
-prev_section: welcome
+prev_section: ""
 ---
