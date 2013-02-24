@@ -5,7 +5,7 @@ prev_section: installation
 next_section: customization
 ---
 
-CASino allows you to change it's behavior through multiple configuration parameters. These configuration parameters are stored in [YAML](http://en.wikipedia.org/wiki/YAML) files. The first level of the hierarchy is always the environment such as `development`, `staging` or `production`. This allows you to configure all your environment in the same configuration file.
+CASino allows you to change it's behavior through multiple configuration parameters. These configuration parameters are stored in [YAML](http://en.wikipedia.org/wiki/YAML) files. The first level of the hierarchy is always the environment such as `development`, `staging` or `production`. This allows you to configure all your environments in the same configuration file.
 
 ## Database
 
@@ -67,7 +67,7 @@ two_factor_authenticator:
           <strong>Lifetime</strong>
         </p>
         <p class="description">
-          Specifies how long the login ticket should live before it expires (in seconds). This is, how much time the user gets from seeing to submitting the login form.
+          Specifies how long (in seconds) the login ticket should live before it expires. This is how much time the user gets from seeing to submitting the login form.
         </p>
       </td>
       <td style="padding-left: 20px">
@@ -93,7 +93,7 @@ two_factor_authenticator:
           <strong>Lifetime</strong>
         </p>
         <p class="description">
-          Specifies how long the ticket-granting ticket should live before it expires (in seconds). This is, how long the user can stay loggedin to your SSO before he has to relogin to your CASino installation.
+          Specifies how long (in seconds) the ticket-granting ticket should live before it expires. This is, how long the user can stay loggedin to your SSO before he has to relogin to your CASino installation.
         </p>
       </td>
       <td style="padding-left: 20px">
@@ -119,7 +119,7 @@ two_factor_authenticator:
           <strong>Lifetime (unconsumed)</strong>
         </p>
         <p class="description">
-          Specifies how much time (in seconds) the service has for it's validation request.
+          Specifies how much time (in seconds) the service may have for it's validation request.
         </p>
       </td>
       <td style="padding-left: 20px">
