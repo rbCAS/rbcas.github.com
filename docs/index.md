@@ -21,5 +21,5 @@ For the impatient, here’s how to get CASino up and running:
 gem install bundler
 git clone https://github.com/rbCAS/CASinoApp.git
 cd CASinoApp
-./script/install <database>
+./script/install sqlite # choose either postgres, mysql or sqlite
 {% endhighlight %}
