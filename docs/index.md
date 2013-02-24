@@ -14,9 +14,9 @@ CASino is a simple Single sign-on server application. It supports the [CAS proto
 
 For the impatient, here’s how to get CASino up and running:
 
-``` bash
+{% highlight bash %}
 gem install bundler
 git clone https://github.com/rbCAS/CASinoApp.git
 cd CASinoApp
 ./script/install <database>
-```
+{% endhighlight %}
