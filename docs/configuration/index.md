@@ -20,7 +20,53 @@ bundle exec rake casino_core:db:schema:load
 
 ## CAS
 
+The CAS configuration is stored under `config/cas.yml`. This is where you configure how your SSO handles logins.
+
 ### Authenticators
+
+CASino has an extensible authenticator interface to support a wide range of different authentication stores such as an [LDAP](https://github.com/rbCAS/casino_core-authenticator-ldap) directory or an [SQL database](https://github.com/rbCAS/casino_core-authenticator-activerecord). Multiple authenticators can be active – **simultaneously**.
+
+Each authenticator must have a unique identifier which is used internally in combination with the username to distinguish the users of your CAS server.
+
+Example configuration for an authentication against an LDAP directory service:
+
+{% highlight yaml %}
+authenticators:
+  my_company_ldap:
+    authenticator: "LDAP"
+      options:
+        host: "localhost"
+        port: 636
+        base: "ou=People,dc=example,dc=com"
+        username_attribute: "uid"
+        encryption: "simple_tls"
+        extra_attributes:
+          email: "mail"
+          fullname: "displayname"
+{% endhighlight %}
+
+In the example above, we chose `my_company_ldap` as our unique identifier. `extra_attributes` allows you to pass additional data to the services using your SSO. With our example configuration, services would get a field named `email` which would contain the value stored in the LDAP as `mail` and `fullname` stored in the LDAP as `displayname`.
+
+Example configuration for an authentication against a MySQL table:
+{% highlight yaml %}
+my_funny_sql_database:
+  authenticator: "ActiveRecord"
+  options:
+    connection:
+      adapter: "mysql2"
+      host: "localhost"
+      username: "casino"
+      password: "secret"
+      database: "users"
+    table: "users"
+    username_column: "username"
+    password_column: "password"
+    extra_attributes:
+      email: "email_database_column"
+      fullname: "displayname_database_column"
+{% endhighlight %}
+
+In this example, we chose `my_company_ldap` as our unique identifier. CASino will search for users in the `users` table. `username` contains the username whereas `password` contains the password. The authenticator supports [Unix crypt style](http://www.kernel.org/doc/man-pages/online/pages/man3/crypt.3.html#NOTES) stored passwords. Supported algorithms are salted MD5, salted SHA256 and SHA512 as well as the recommended bcrypt algorithm.
 
 ### Parameters
 These are the default parameters, that you can overwrite within the `config/cas.yml`:
