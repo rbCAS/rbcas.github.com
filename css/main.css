@@ -1095,6 +1095,7 @@ body {
   margin: 0;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   background: #36393B;
 }
 body,
@@ -1125,6 +1126,10 @@ section {
   width: 100%;
   padding: 30px 0;
 }
+a {
+  color: #EEE6AB;
+  font-weight: 600;
+}
 div.highlight,
 code {
   background-color: #1E1E20;
@@ -1147,7 +1152,6 @@ div.highlight code {
 .header ul li a {
   padding: 5px 10px;
   margin-right: 10px;
-  color: #ccc;
   border-radius: 5px;
   font-size: 100%;
   font-weight: 800;
