@@ -1099,7 +1099,8 @@ body {
   background: #36393B;
 }
 body,
-p {
+p,
+li {
   font-size: 18px;
 }
 h1,
@@ -1117,7 +1118,7 @@ h1 {
   font-size: 200%;
 }
 h2 {
-  font-size: 150%;
+  font-size: 170%;
 }
 h3 {
   font-size: 100%;
@@ -1143,7 +1144,28 @@ div.highlight {
 }
 div.highlight code {
   font-size: 120%;
-  line-height: 120%;
+}
+code {
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 100%;
+  line-height: 170%;
+}
+td code {
+  font-size: 120%;
+}
+table {
+  margin-top: 20px;
+}
+table td {
+  padding: 10px;
+}
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+ul li {
+  margin-left: 20px;
 }
 .header ul {
   list-style-type: none;
