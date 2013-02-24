@@ -1086,7 +1086,7 @@ ul.icons li [class*=" icon-"] {
   position: absolute;
   font-size: 500%;
   left: -13px;
-  top: -16px;
+  top: -17px;
 }
 * {
   box-sizing: border-box;
@@ -1244,7 +1244,7 @@ div.highlight code {
   position: absolute;
   font-size: 500%;
   left: -13px;
-  top: -16px;
+  top: -17px;
 }
 .prev.disabled,
 .next.disabled {
