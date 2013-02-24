@@ -20,6 +20,9 @@ bundle exec rake casino_core:db:schema:load
 
 ## CAS
 
+### Authenticators
+
+### Parameters
 These are the default parameters, that you can overwrite within the `config/cas.yml`:
 
 {% highlight yaml %}
