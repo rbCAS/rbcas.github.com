@@ -1,5 +1,5 @@
 ---
 layout: docs
 title: Contributing
-prev_section: deployment
+prev_section: client-integration
 ---

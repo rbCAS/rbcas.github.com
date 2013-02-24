@@ -2,5 +2,5 @@
 layout: docs
 title: Deployment
 prev_section: customization
-next_section: contributing
+next_section: client-integration
 ---
