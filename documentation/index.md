@@ -1,9 +1,7 @@
 ---
-layout: default
-title: "CASino Documentation"
+layout: docs
+title: "Welcome"
 ---
-
-# Welcome
 
 This site aims to be a comprehensive guide to CASino. We'll cover everything from getting your Single sign-on (SSO) up and running, customizing the way it works and looks, deploying to various environments, get your applications to work with your brand new SSO, as well as some advice on participating in the future development of CASino itself.
 
