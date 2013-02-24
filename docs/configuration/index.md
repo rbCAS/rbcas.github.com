@@ -66,7 +66,7 @@ my_user_database:
       fullname: "displayname_database_column"
 {% endhighlight %}
 
-In this example, we chose `my_user_database` as our unique identifier. CASino will search for users in the `users` table. `username` contains the username whereas `password` contains the password. The authenticator supports [Unix crypt style](http://www.kernel.org/doc/man-pages/online/pages/man3/crypt.3.html#NOTES) stored passwords. Supported algorithms are salted MD5, salted SHA256 and SHA512 as well as the recommended bcrypt algorithm.
+In this example, we chose `my_user_database` as our unique identifier. CASino will search for users in the `users` table. The column `username` contains the usernames whereas `password` contains the corresponding passwords. The authenticator supports [Unix crypt style](http://www.kernel.org/doc/man-pages/online/pages/man3/crypt.3.html#NOTES) stored passwords. Supported algorithms are salted MD5, salted SHA256 and SHA512 as well as the recommended bcrypt algorithm.
 
 ### Parameters
 These are the default parameters, that you can overwrite within the `config/cas.yml`:
