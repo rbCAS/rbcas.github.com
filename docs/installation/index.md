@@ -17,7 +17,7 @@ Installing CASino is easy and straight-forward, but there's a few requirements y
 
 ## Install using CASinoApp
 
-Using the CASinoApp is the easiest way to get your CAS server up and running. Once you downloaded the latest version follow this simple steps to get a basic configuration:
+Using the CASinoApp is the easiest and recommended way to get your CAS server up and running. Once you downloaded the latest version follow this simple steps to get a basic configuration:
 
 {% highlight bash %}
 cd CASinoApp
@@ -26,3 +26,34 @@ gem install bundler
 {% endhighlight %}
 
 This will generate a basic configuration. You'll learn how to change the configuration in the next chapter.
+
+## Install from scratch
+
+### 1. Create a Ruby on Rails application
+
+Make sure you installed Ruby on Rails 3.2.x (for exampel through `gem install rails -v '~> 3.2.11'`).
+
+{% highlight bash %}
+rails new my-casino --skip-active-record --skip-test-unit --skip-bundle
+cd my-casino
+{% endhighlight %}
+
+### 2. Include and install CASino engine gem
+
+Edit your application's Gemfile and add these lines if missing:
+
+{% highlight bash %}
+gem 'sqlite3'   # for sqlite support
+gem 'mysql2'    # for mysql support
+gem 'pg'        # for postgresql support
+gem 'casino'
+{% endhighlight %}
+
+Run `bundle install` afterwards.
+
+### 3. Generate the initial configuration
+
+{% highlight bash %}
+bundle exec rails g casino:install
+{% endhighlight %}
+Now continue to the next chapter to learn how to change the configuration and load the initial database schema.
