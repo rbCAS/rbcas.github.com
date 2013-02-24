@@ -15,7 +15,7 @@ next_section: contributing
 
 ## PHP
 
-[phpCAS](https://wiki.jasig.org/display/CASC/phpCAS) is an easy way to CAS-ify your PHP applications. There are plugins for [many popular applications](https://wiki.jasig.org/display/CASC/Applications+CASified+with+phpCAS) such as [Drupal](http://drupal.org/project/cas) and [Horde](http://wiki.horde.org/CASAuthHowTo) based on phpCAS. Please check the official [examples](https://wiki.jasig.org/display/CASC/phpCAS+examples) to learn how to integrate phpCAS.
+[phpCAS](https://wiki.jasig.org/display/CASC/phpCAS) is an easy way to CAS-ify your PHP applications. There are plugins for [many popular applications](https://wiki.jasig.org/display/CASC/Applications+CASified+with+phpCAS) such as [Drupal](http://drupal.org/project/cas) and [Horde](http://wiki.horde.org/CASAuthHowTo) based on phpCAS. Please check the [official examples](https://wiki.jasig.org/display/CASC/phpCAS+examples) to learn how to integrate phpCAS.
 
 ## .NET
 
