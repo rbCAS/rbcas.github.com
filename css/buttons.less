@@ -1,0 +1,53 @@
+@buttonColor: #c1c1c1;
+
+.button {
+  background: @buttonColor;
+  border: none;
+  border: 1px solid darken(@buttonColor, 5%);
+  color: #36393b;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 600;
+  line-height: 1;
+  margin: 20px 0 10px 0;
+  outline: none;
+  padding: 10px 20px 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: 800;
+
+
+  &:active {
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  }
+
+  &:hover {
+    background-color: darken(@buttonColor, 10%);
+    color: #36393b;
+  }
+
+  &:active {
+    top: 2px;
+  }
+
+  // &.secondary {
+  //   background: $buttonSecondaryColor;
+  //   border: 1px solid darken($buttonSecondaryColor, 3%);
+  //   color: #222;
+
+  //   &:hover {
+  //     background-color: darken($buttonSecondaryColor, 5%);
+  //   }
+  // }
+}
