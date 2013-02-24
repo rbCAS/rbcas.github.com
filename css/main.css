@@ -1130,6 +1130,9 @@ a {
   color: #EEE6AB;
   font-weight: 600;
 }
+a:hover {
+  color: #C5BC8E;
+}
 div.highlight,
 code {
   background-color: #1E1E20;
