@@ -1141,12 +1141,13 @@ code {
 div.highlight {
   padding: 15px;
   border-radius: 3px;
+  margin-bottom: 20px;
 }
 div.highlight code {
   font-size: 120%;
 }
 code {
-  padding: 4px;
+  padding: 3px 4px;
   border-radius: 2px;
   font-size: 100%;
   line-height: 170%;
