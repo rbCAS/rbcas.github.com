@@ -39,13 +39,13 @@
         </div>
         <div class="nine columns">
           <ul class="nav">
-            <li class="active">
+            <li{% if page.title == "CASino" %} class="active"{% endif %}>
               <a href="/">Home</a>
             </li>
-            <li>
+            <li{% if page.title != "CASino" %} class="active"{% endif %}>
               <a href="/docs">Documentation</a>
             </li>
-            <li><a href="#">Link</a></li>
+            <li><a href="https://github.com/rbCAS">View on GitHub</a></li>
           </ul>
         </div>
       </div>
