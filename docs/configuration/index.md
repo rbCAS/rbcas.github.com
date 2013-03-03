@@ -160,3 +160,24 @@ two_factor_authenticator:
      `drift: [integer]`
 
      HOTP is a time-based solution. Server and mobile phone should have exactly the same time set. This options allows you to specify, how much the server and mobile phone clock may differ (in seconds). Please use a multiple of 30.
+
+## Limit allowed services
+
+By default, CASino has an empty service rule list and accepts all services as valid. CASino has several commands to manage a whitelist of allowed services:
+
+{% highlight bash %}
+# if you are in production, execute the following command first:
+#export RAILS_ENV=production
+
+bundle exec rake casino_core:service_rule:flush           # Delete all servcice rules.
+bundle exec rake casino_core:service_rule:list            # List all service rules.
+bundle exec rake casino_core:service_rule:delete[$ID]     # Remove a servcice rule.
+
+bundle exec rake casino_core:service_rule:add[$NAME,$URL] # Add a service rule (prefix the url parameter with "regex:" to add a regular expression)
+# Allow all HTTPS services:
+bundle exec rake casino_core:service_rule:add["HTTPS","regex:^https:"]
+# Allow a domain:
+bundle exec rake casino_core:service_rule:add["example.org","regex:^https?://example.org/"]
+# Allow exactly one page:
+bundle exec rake casino_core:service_rule:add["example.com","https://example.com/"]
+{% endhighlight %}
