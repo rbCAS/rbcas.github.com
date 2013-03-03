@@ -31,7 +31,7 @@ This will generate a basic configuration. You'll learn how to change the configu
 
 ### 1. Create a Ruby on Rails application
 
-Make sure you installed Ruby on Rails 3.2.x (for exampel through `gem install rails -v '~> 3.2.11'`).
+Make sure you installed Ruby on Rails 3.2.x (for example through `gem install rails -v '~> 3.2.11'`).
 
 {% highlight bash %}
 rails new my-casino --skip-active-record --skip-test-unit --skip-bundle
@@ -57,3 +57,11 @@ Run `bundle install` afterwards.
 bundle exec rails g casino:install
 {% endhighlight %}
 Now continue to the next chapter to learn how to change the configuration and load the initial database schema.
+
+## Cronjob
+
+Regardless of the installation method, it's highly recommended to add the following cleanup task as a cronjob (`crontab -e`):
+
+{% highlight bash %}
+*/5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
+{% endhighlight %}
