@@ -27,4 +27,16 @@ body {
 }
 {% endhighlight %}
 
-## Layout / Templates
+## Views
+
+You can overwrite any layout or template file, by placing it in the `app/views` folder. Just use the same path as the original template or layout: [Browse `views` tree](https://github.com/rbCAS/CASino/tree/master/app/views)
+
+Example: If you would like to use a custom logout page, place it in `app/views/casino/sessions/logout.html.erb`:
+{% highlight rhtml %}
+<h1>OMG, logged out!</h1>
+<% unless @url.nil? %>
+  <a href="<%= @url %>"><%= @url %></a>
+<% end %>
+{% endhighlight %}
+
+**Warning**: If you can, stick to CSS customization and don't overwrite layouts or templates. Custom views may make it harder to upgrade your CASino installation to the latest version.
