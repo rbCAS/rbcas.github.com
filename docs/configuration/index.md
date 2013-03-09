@@ -12,6 +12,7 @@ CASino allows you to change it's behavior through multiple configuration paramet
 CASino needs a database to store session data, user settings and other CAS-related stuff. The database configuration is located in `config/database.yml`.
 
 We included example configurations for the most commonly used databases (SQLite, MySQL and PostgreSQL) under `config/database.yml.example.<database>`. But it doesn't stop here: As CASino uses Rails' ActiveRecord, databases such as DB2, Oracle, SQL Server and many more are also usable.
+**Warning**: Using SQLite in a production environment is not recommended.
 
 If you change your database settings, be sure to load the empty database schema:
 {% highlight bash %}
@@ -20,7 +21,7 @@ bundle exec rake casino_core:db:schema:load
 
 ## CAS
 
-The CAS configuration is stored under `config/cas.yml`. This is where you configure how your SSO handles logins.
+The CAS configuration is stored under `config/cas.yml`. This is where you configure how your SSO handles logins. An example configuration can be found in the file `config/cas.yml.example`.
 
 ### Authenticators
 

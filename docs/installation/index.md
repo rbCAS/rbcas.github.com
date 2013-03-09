@@ -17,15 +17,31 @@ Installing CASino is easy and straight-forward, but there's a few requirements y
 
 ## Install using CASinoApp
 
-Using the CASinoApp is the easiest and recommended way to get your CAS server up and running. Once you downloaded the latest version follow this simple steps to get a basic configuration:
+Using the CASinoApp is the easiest and recommended way to get your CAS server up and running.
+
+### Directly on your server
+
+Once you downloaded the latest version follow this simple steps to get a basic configuration:
 
 {% highlight bash %}
 cd CASinoApp
 gem install bundler
-./script/install sqlite # choose either postgres, mysql or sqlite
+./script/install sqlite # choose either postgres or mysql
 {% endhighlight %}
 
 This will generate a basic configuration. You'll learn how to change the configuration in the next chapter.
+
+### Using a multi-staging environment
+
+If you are willing to setup a multi-staging environment (development, staging, production), do the following on your development machine:
+
+{% highlight bash %}
+cd CASinoApp
+gem install bundler
+bundle install
+{% endhighlight %}
+
+Then continue to the next chapters and learn how to configure and deploy your CASino installation. You may also want to initialize a Git repository at this time.
 
 ## Install from scratch
 
@@ -42,7 +58,7 @@ cd my-casino
 
 Edit your application's Gemfile and add these lines if missing:
 
-{% highlight bash %}
+{% highlight ruby %}
 gem 'sqlite3'   # for sqlite support
 gem 'mysql2'    # for mysql support
 gem 'pg'        # for postgresql support
