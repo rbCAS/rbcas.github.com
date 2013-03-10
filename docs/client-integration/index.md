@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Client integration
+title: Client Integration
 prev_section: deployment
 next_section: contributing
 ---
