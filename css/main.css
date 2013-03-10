@@ -1295,6 +1295,15 @@ ul li {
   background-color: #1D1F20;
   padding: 10px 15px;
 }
+.toc li a {
+  color: white;
+}
+.toc li a:hover {
+  text-decoration: underline;
+}
+.toc li.active {
+  background-color: #131515;
+}
 .toc li:first-child {
   display: block;
   cursor: pointer;
