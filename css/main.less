@@ -159,6 +159,22 @@ ul {
   }
 }
 
+.toc {
+  width: auto;
+  position: absolute;
+  right: 15px;
+  li {
+    display: none;
+    background-color: #1D1F20;
+    padding: 10px 15px;
+
+    &:first-child {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
 
 @media (max-width: 767px) {
   body {
