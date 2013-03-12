@@ -78,6 +78,13 @@ Now continue to the next chapter to learn how to change the configuration and lo
 
 Regardless of the installation method, it's highly recommended to add the following cleanup task as a cronjob (`crontab -e`):
 
-{% highlight bash %}
+{% highlight cron %}
 */5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
 {% endhighlight %}
+
+You can easily add it with the following command:
+
+{% highlight bash %}
+bundle exec whenever --update-crontab CASino
+{% endhighlight %}
+
