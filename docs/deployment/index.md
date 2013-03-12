@@ -20,11 +20,15 @@ bundle install
 {% highlight bash %}
 cp config/deployment-config.example.yml config/deployment-config.yml
 cp config/deploy.example.rb config/deploy.rb
+cp config/cas.yml.example config/deploy/cas.yml
+cp config/database.yml.<database-type> config/deploy/database.yml
 {% endhighlight %}
 
 ### Configure the setup
 {% highlight bash %}
-vim config/deployment-config.yml
+vim config/deployment-config.yml # Settings for the deployment
+vim config/deploy/cas.yml        # CAS-settings
+vim config/deploy/database.yml   # Database settings
 {% endhighlight %}
 
 ### Deploy
