@@ -73,6 +73,9 @@ In this example, we chose `my_user_database` as our unique identifier. CASino wi
 These are the default parameters, that you can overwrite within the `config/cas.yml`:
 
 {% highlight yaml %}
+frontend:
+  sso_name: 'CASinoApp'
+  footer_text: 'Powered by <a href="http://casino.rbcas.com/">CASino</a>'
 login_ticket:
   lifetime: 600
 ticket_granting_ticket:
@@ -89,6 +92,22 @@ two_factor_authenticator:
   lifetime_inactive: 300
   drift: 30
 {% endhighlight %}
+
+* ### Frontend
+
+  Configuration parameters for the UI part of CASino.
+
+  * **sso_name**
+
+    `sso_name: [string]`
+
+    The name of your SSO. This is used as title in the header etc.
+
+  * **footer_text**
+
+    `footer_text: [string]`
+
+    Text for the footer, displayed on every page.
 
 * ### Login Ticket
 
