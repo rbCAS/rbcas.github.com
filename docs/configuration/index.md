@@ -97,13 +97,13 @@ two_factor_authenticator:
 
   Configuration parameters for the UI part of CASino.
 
-  * **sso_name**
+  * **SSO name**
 
     `sso_name: [string]`
 
     The name of your SSO. This is used as title in the header etc.
 
-  * **footer_text**
+  * **Footer text**
 
     `footer_text: [string]`
 
