@@ -82,9 +82,8 @@ Regardless of the installation method, it's highly recommended to add the follow
 */5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
 {% endhighlight %}
 
-You can easily add it with the following command:
+If you used the CASinoApp, you can easily add it with the following command:
 
 {% highlight bash %}
 bundle exec whenever --update-crontab CASino
 {% endhighlight %}
-
