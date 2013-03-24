@@ -80,6 +80,7 @@ login_ticket:
   lifetime: 600
 ticket_granting_ticket:
   lifetime: 86400
+  lifetime_long_term: 864000
 service_ticket:
   lifetime_unconsumed: 300
   lifetime_consumed: 86400
@@ -128,6 +129,12 @@ two_factor_authenticator:
      `lifetime: [integer]`
 
      Specifies how long (in seconds) the ticket-granting ticket should live before it expires. This is, how long the user can stay loggedin to your SSO before he has to relogin to your CASino installation.
+
+   * **Lifetime (long-term)**
+
+     `lifetime_long_term: [integer]`
+
+     This is the maximum lifetime of long-term ticket-granting tickets ("Stay logged in").
 
 * ### Service ticket
 
