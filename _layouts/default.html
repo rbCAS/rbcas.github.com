@@ -37,10 +37,12 @@
             <li{% if page.title == "CASino" %} class="active"{% endif %}>
               <a href="/">Home</a>
             </li>
-            <li{% if page.title != "CASino" %} class="active"{% endif %}>
-              <a href="/docs">Documentation</a>
+            <li{% if page.title != "CASino" %}{% if page.title != "Screenshots" %} class="active"{% endif %}{% endif %}>
+              <a href="/docs/">Documentation</a>
             </li>
-            <li><a href="https://github.com/rbCAS">View on GitHub</a></li>
+            <li{% if page.title == "Screenshots" %} class="active"{% endif %}>
+              <a href="/screenshots/">Screenshots</a>
+            </li>
           </ul>
         </div>
       </div>
