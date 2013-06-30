@@ -29,6 +29,8 @@ CASino has an extensible authenticator interface to support a wide range of diff
 
 Each authenticator must have a unique identifier which is used internally in combination with the username to distinguish the users of your CAS server.
 
+#### LDAP
+
 Example configuration for an authentication against an LDAP directory service:
 
 {% highlight yaml %}
@@ -52,7 +54,10 @@ In the example above, we chose `my_company_ldap` as our unique identifier. `extr
 
 `admin_user` and `admin_password` are the credentials to perform user lookup. If your LDAP server allows anonymous access, you don't need to provide these two parameters.
 
+#### Database
+
 Example configuration for an authentication against a MySQL table:
+
 {% highlight yaml %}
 my_user_database:
   authenticator: "ActiveRecord"
@@ -98,7 +103,7 @@ two_factor_authenticator:
   drift: 30
 {% endhighlight %}
 
-* ### Frontend
+* #### Frontend
 
   Configuration parameters for the UI part of CASino.
 
@@ -114,7 +119,7 @@ two_factor_authenticator:
 
     Text for the footer, displayed on every page.
 
-* ### Login Ticket
+* #### Login Ticket
 
   A login ticket is used to ensure, a user can not resubmit his credentials.
 
@@ -124,7 +129,7 @@ two_factor_authenticator:
 
      Specifies how long (in seconds) the login ticket should live before it expires. This is how much time the user gets from seeing to submitting the login form.
 
-* ### Ticket-granting ticket
+* #### Ticket-granting ticket
 
   A ticket-granting ticket is used as an identifier of the Single-sign on session. It's identifier is stored as a cookie by the user's browser.
 
@@ -140,7 +145,7 @@ two_factor_authenticator:
 
      This is the maximum lifetime of long-term ticket-granting tickets ("Stay logged in").
 
-* ### Service ticket
+* #### Service ticket
 
   Service tickets are used by service's as an identifier of the Single-sign on session. A service ticket is only valid for one validation request. This is why services have to store the result in their own session.
 
@@ -166,11 +171,11 @@ two_factor_authenticator:
 
         If the service does not handle the single sign-out notification after this period (in seconds), CASino will try again later.
 
-* ### Proxy ticket
+* #### Proxy ticket
 
   Proxy tickets can be obtained by services to allow services without a web frontend the usage of SSO data. This section supports the same configuration parameters as the Service Ticket (see above).
 
-* ### Two-factor authenticator
+* #### Two-factor authenticator
 
   CASino supports two-factor authentication with HOTP systems such as the <a href="http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=1066447">Google Authenticator</a>.
 

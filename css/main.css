@@ -1099,8 +1099,7 @@ body {
   background: #36393B;
 }
 body,
-p,
-li {
+p {
   font-size: 18px;
 }
 h1,
@@ -1121,14 +1120,17 @@ h2 {
   font-size: 170%;
 }
 h3 {
-  font-size: 100%;
+  font-size: 130%;
+}
+h4 {
+  font-size: 110%;
+}
+article.home h2 {
+  margin: 0 0 15px;
 }
 section {
   width: 100%;
   padding: 40px 0;
-}
-section h4 {
-  margin: 0 0 15px;
 }
 section p {
   margin: 0;
