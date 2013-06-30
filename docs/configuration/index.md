@@ -41,12 +41,16 @@ authenticators:
         base: "ou=People,dc=example,dc=com"
         username_attribute: "uid"
         encryption: "simple_tls"
+        admin_user: "cn=admin,dc=example,dc=com"
+        admin_password: "password"
         extra_attributes:
           email: "mail"
           fullname: "displayname"
 {% endhighlight %}
 
 In the example above, we chose `my_company_ldap` as our unique identifier. `extra_attributes` allows you to pass additional data to the services using your SSO. With our example configuration, services would get a field named `email` which would contain the value stored in the LDAP as `mail` and `fullname` stored in the LDAP as `displayname`.
+
+`admin_user` and `admin_password` are the credentials to perform user lookup. If your LDAP server allows anonymous access, you don't need to provide these two parameters.
 
 Example configuration for an authentication against a MySQL table:
 {% highlight yaml %}
