@@ -107,13 +107,13 @@ two_factor_authenticator:
 
   Configuration parameters for the UI part of CASino.
 
-  * **SSO name**
+  * ##### SSO name
 
     `sso_name: [string]`
 
     The name of your SSO. This is used as title in the header etc.
 
-  * **Footer text**
+  * ##### Footer text
 
     `footer_text: [string]`
 
@@ -123,7 +123,7 @@ two_factor_authenticator:
 
   A login ticket is used to ensure, a user can not resubmit his credentials.
 
-   * **Lifetime**
+   * ##### Lifetime
 
      `lifetime: [integer]`
 
@@ -133,13 +133,13 @@ two_factor_authenticator:
 
   A ticket-granting ticket is used as an identifier of the Single-sign on session. It's identifier is stored as a cookie by the user's browser.
 
-   * **Lifetime**
+   * ##### Lifetime
 
      `lifetime: [integer]`
 
      Specifies how long (in seconds) the ticket-granting ticket should live before it expires. This is, how long the user can stay loggedin to your SSO before he has to relogin to your CASino installation.
 
-   * **Lifetime (long-term)**
+   * ##### Lifetime (long-term)
 
      `lifetime_long_term: [integer]`
 
@@ -149,23 +149,23 @@ two_factor_authenticator:
 
   Service tickets are used by service's as an identifier of the Single-sign on session. A service ticket is only valid for one validation request. This is why services have to store the result in their own session.
 
-   * **Lifetime (unconsumed)**
+   * ##### Lifetime (unconsumed)
 
      `lifetime_unconsumed: [integer]`
 
      Specifies how much time (in seconds) the service may have for it's validation request.
 
-   * **Lifetime (consumed)**
+   * ##### Lifetime (consumed)
 
      `lifetime_consumed: [integer]`
 
      Specifies how long (in seconds) the user should stayed loggedin in services using this SSO. After this period, SSO will send out a single sign-out notification to the service. Not all services handle this notifications!
 
-   * **Single sign-out notification**
+   * ##### Single sign-out notification
 
      Single sign-out notifications are used to forward logout requests to all services.
 
-      * **Timeout**
+      * ###### Timeout
 
         `timeout: [integer]`
 
@@ -179,19 +179,19 @@ two_factor_authenticator:
 
   CASino supports two-factor authentication with HOTP systems such as the <a href="http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=1066447">Google Authenticator</a>.
 
-   * **Enabled**
+   * ##### Enabled
 
      `enabled: [boolean]`
 
      This allows you to disable two-factor authentication.
 
-   * **Lifetime (inactive)**
+   * ##### Lifetime (inactive)
 
      `lifetime_inactive: [integer]`
 
      Specifies how much time the user has to initially validate and activate the two-factor authenticator.
 
-   * **Drift**
+   * ##### Drift
 
      `drift: [integer]`
 
