@@ -34,7 +34,7 @@ bundle exec rake db:migrate SCOPE=casino
 
 ## 4. Restart app server
 
-Restart your app server. Most app server check for the file `tmp/restart.txt`, so running the following command should be enough:
+Restart your app server. Running the following command should do it for most app servers:
 
 {% highlight bash %}
 touch tmp/restart.txt
