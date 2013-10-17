@@ -21,7 +21,6 @@ If you are upgrading from CASino 1.x to CASino 2.x, you need to run the followin
 
 {% highlight bash %}
 bundle exec rails g casino:migrate
-bundle exec rake db:migrate SCOPE=casino
 {% endhighlight %}
 
 ## 3. Database migrations
