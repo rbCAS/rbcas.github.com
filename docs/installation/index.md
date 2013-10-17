@@ -21,7 +21,7 @@ Using the CASinoApp is the easiest and recommended way to get your CAS server up
 
 ### Directly on your server
 
-Once you downloaded the latest version follow this simple steps to get a basic configuration:
+Once you downloaded the latest version follow these simple steps to get a basic configuration:
 
 {% highlight bash %}
 cd CASinoApp
@@ -50,7 +50,7 @@ Then continue to the next chapters and learn how to configure and deploy your CA
 Make sure you installed Ruby on Rails 3.2.x (for example through `gem install rails -v '~> 3.2.11'`).
 
 {% highlight bash %}
-rails new my-casino --skip-active-record --skip-test-unit --skip-bundle
+rails new my-casino --skip-test-unit --skip-bundle
 cd my-casino
 {% endhighlight %}
 
@@ -69,10 +69,11 @@ Run `bundle install` afterwards.
 
 ### 3. Generate the initial configuration
 
+To generate the initial CASino configuration files, execute the following command:
+
 {% highlight bash %}
 bundle exec rails g casino:install
 {% endhighlight %}
-Now continue to the next chapter to learn how to change the configuration and load the initial database schema.
 
 ## Cronjob
 
