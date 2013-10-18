@@ -119,6 +119,7 @@ ul {
     margin-top: 4px;
     li {
       float: left;
+      margin-left: 15px;
 
       a {
         padding: 5px 10px;
@@ -219,5 +220,39 @@ ul {
 @media (max-width: 767px) {
   body {
     padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  article.home {
+    h1 {
+      margin: 20px 0 5px;
+    }
+  }
+
+  .toc {
+    position: relative;
+
+    li:first-child span {
+      float: right;
+      margin-top: 5px;
+    }
+  }
+
+  .header ul {
+    margin-top: 10px;
+
+    li {
+      display: block;
+      width: 100%;
+      margin: 0;
+
+      a {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        font-size: 120%;
+      }
+    }
   }
 }
