@@ -2,7 +2,7 @@
 layout: docs
 title: Deployment
 prev_section: customization
-next_section: client-integration
+next_section: upgrading
 ---
 
 If you did not setup your CASino installation directly on the productive server, you have several possibilities to deploy your code. Other deployment methods (such as a simple `scp`) may also work fine – we documented just some common scenarios.

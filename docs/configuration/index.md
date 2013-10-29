@@ -9,14 +9,15 @@ CASino allows you to change it's behavior through multiple configuration paramet
 
 ## Database
 
-CASino needs a database to store session data, user settings and other CAS-related stuff. The database configuration is located in `config/database.yml`.
+CASino needs a database to store session data, user settings and other CAS-related data. Like in any other Rails application, the database configuration is located in `config/database.yml`.
 
 We included example configurations for the most commonly used databases (SQLite, MySQL and PostgreSQL) under `config/database.yml.example.<database>`. But it doesn't stop here: As CASino uses Rails' ActiveRecord, databases such as DB2, Oracle, SQL Server and many more are also usable.
 **Warning**: Using SQLite in a production environment is not recommended.
 
 If you change your database settings, be sure to load the empty database schema:
+
 {% highlight bash %}
-bundle exec rake casino_core:db:schema:load
+bundle exec rake db:migrate SCOPE=casino
 {% endhighlight %}
 
 ## CAS
@@ -25,7 +26,7 @@ The CAS configuration is stored under `config/cas.yml`. This is where you config
 
 ### Authenticators
 
-CASino has an extensible authenticator interface to support a wide range of different authentication stores such as an [LDAP](https://github.com/rbCAS/casino_core-authenticator-ldap) directory or an [SQL database](https://github.com/rbCAS/casino_core-authenticator-activerecord). Multiple authenticators can be active – **simultaneously**.
+CASino has an extensible authenticator interface to support a wide range of different authentication stores such as an [LDAP](https://github.com/rbCAS/casino-ldap_authenticator) directory or an [SQL database](https://github.com/rbCAS/casino-activerecord_authenticator). Multiple authenticators can be active – **simultaneously**.
 
 Each authenticator must have a unique identifier which is used internally in combination with the username to distinguish the users of your CAS server.
 
@@ -206,15 +207,16 @@ By default, CASino has an empty service rule list and accepts all services as va
 # if you are in production, execute the following command first:
 #export RAILS_ENV=production
 
-bundle exec rake casino_core:service_rule:flush           # Delete all servcice rules.
-bundle exec rake casino_core:service_rule:list            # List all service rules.
-bundle exec rake casino_core:service_rule:delete[$ID]     # Remove a servcice rule.
+bundle exec rake casino:service_rule:flush           # Delete all servcice rules.
+bundle exec rake casino:service_rule:list            # List all service rules.
+bundle exec rake casino:service_rule:delete[$ID]     # Remove a servcice rule.
 
-bundle exec rake casino_core:service_rule:add[$NAME,$URL] # Add a service rule (prefix the url parameter with "regex:" to add a regular expression)
+bundle exec rake casino:service_rule:add[$NAME,$URL] # Add a service rule (prefix the url parameter with "regex:" to add a regular expression)
 # Allow all HTTPS services:
-bundle exec rake casino_core:service_rule:add["HTTPS","regex:^https:"]
+bundle exec rake casino:service_rule:add["HTTPS","regex:^https:"]
 # Allow a domain:
-bundle exec rake casino_core:service_rule:add["example.org","regex:^https?://example.org/"]
+bundle exec rake casino:service_rule:add["example.org","regex:^https?://example.org/"]
 # Allow exactly one page:
-bundle exec rake casino_core:service_rule:add["example.com","https://example.com/"]
+bundle exec rake casino:service_rule:add["example.com","https://example.com/"]
 {% endhighlight %}
+

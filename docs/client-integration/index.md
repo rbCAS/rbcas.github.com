@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Client Integration
-prev_section: deployment
+prev_section: upgrading
 next_section: contributing
 ---
 
