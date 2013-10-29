@@ -80,7 +80,7 @@ bundle exec rails g casino:install
 Regardless of the installation method, it's highly recommended to add the following cleanup task as a cronjob (`crontab -e`):
 
 {% highlight bash %}
-*/5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino_core:cleanup:all > /dev/null
+*/5 * * * * cd /path/to/CASinoApp && RAILS_ENV=production bundle exec rake casino:cleanup:all > /dev/null
 {% endhighlight %}
 
 If you used the CASinoApp, you can easily add it with the following command:
