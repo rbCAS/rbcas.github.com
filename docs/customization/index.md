@@ -41,3 +41,7 @@ Example: If you would like to use a custom logout page, place it in `app/views/c
 {% endhighlight %}
 
 **Warning**: If you can, stick to CSS customization and don't overwrite layouts or templates. Custom views may make it harder to upgrade your CASino installation to the latest version.
+
+## Precompile
+
+After the customization is done, the templates and assets have to be pre-compiled: `bundle exec rake assets:precompile`. The application needs a restart to pick-up the changes, just do a `touch tmp/restart.txt`
