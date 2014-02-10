@@ -55,6 +55,8 @@ In the example above, we chose `my_company_ldap` as our unique identifier. `extr
 
 `admin_user` and `admin_password` are the credentials to perform user lookup. If your LDAP server allows anonymous access, you don't need to provide these two parameters.
 
+If you don't want to use encryption (TLS) for the connection to your LDAP server, just leave the option `encryption` away. `encryption` has only one option to chose: `simple_tls`
+
 #### Database
 
 Example configuration for an authentication against a MySQL table:
@@ -207,9 +209,9 @@ By default, CASino has an empty service rule list and accepts all services as va
 # if you are in production, execute the following command first:
 #export RAILS_ENV=production
 
-bundle exec rake casino:service_rule:flush           # Delete all servcice rules.
+bundle exec rake casino:service_rule:flush           # Delete all service rules.
 bundle exec rake casino:service_rule:list            # List all service rules.
-bundle exec rake casino:service_rule:delete[$ID]     # Remove a servcice rule.
+bundle exec rake casino:service_rule:delete[$ID]     # Remove a service rule.
 
 bundle exec rake casino:service_rule:add[$NAME,$URL] # Add a service rule (prefix the url parameter with "regex:" to add a regular expression)
 # Allow all HTTPS services:
