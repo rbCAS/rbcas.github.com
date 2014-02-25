@@ -9,7 +9,7 @@ prev_section: client-integration
 Before you start working on CASino you probably should know a bit about the architecture.
 
 * [CASino](https://github.com/rbCAS/CASino) consists of all the CAS related logic and a [Rails::Engine](http://edgeapi.rubyonrails.org/classes/Rails/Engine.html) handling all the web related parts
-* [CASinoApp](https://github.com/rbCAS/CASinoApp) is a ready to use CAS server which mounts the CASino Rails::Eninge
+* [CASinoApp](https://github.com/rbCAS/CASinoApp) is a ready to use CAS server which mounts the CASino Rails::Engine
 
 ## Workflow
 
