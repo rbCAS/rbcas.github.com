@@ -26,7 +26,7 @@ The CAS configuration is stored under `config/cas.yml`. This is where you config
 
 ### Authenticators
 
-CASino has an extensible authenticator interface to support a wide range of different authentication stores such as an [LDAP](https://github.com/rbCAS/casino-ldap_authenticator) directory or an [SQL database](https://github.com/rbCAS/casino-activerecord_authenticator). Multiple authenticators can be active – **simultaneously**.
+CASino has an extensible authenticator interface to support a wide range of different authentication stores such as an [LDAP](https://github.com/rbCAS/casino-ldap_authenticator) directory or an [SQL database](https://github.com/rbCAS/casino-activerecord_authenticator). Check the [the Wiki](https://github.com/rbCAS/CASino/wiki/Authenticators-List) for a list of the authenticators. Multiple authenticators can be active – **simultaneously**.
 
 Each authenticator must have a unique identifier which is used internally in combination with the username to distinguish the users of your CAS server.
 
