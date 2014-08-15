@@ -55,7 +55,7 @@ In the example above, we chose `my_company_ldap` as our unique identifier. `extr
 
 `admin_user` and `admin_password` are the credentials to perform user lookup. If your LDAP server allows anonymous access, you don't need to provide these two parameters.
 
-If you don't want to use encryption (TLS) for the connection to your LDAP server, just leave the option `encryption` away. `encryption` has only one option to chose: `simple_tls`
+If you don't want to use encryption (TLS) for the connection to your LDAP server, just omit the option `encryption`. `encryption` has only one option to choose: `simple_tls`
 
 #### Database
 
@@ -80,7 +80,7 @@ authenticators:
         fullname: "displayname_database_column"
 {% endhighlight %}
 
-In this example, we chose `my_user_database` as our unique identifier. CASino will search for users in the `users` table. The column `username` contains the usernames whereas `password` contains the corresponding passwords. The authenticator supports [Unix crypt style](http://www.kernel.org/doc/man-pages/online/pages/man3/crypt.3.html#NOTES) stored passwords. Supported algorithms are salted MD5, salted SHA256 and SHA512 as well as the recommended bcrypt algorithm.
+In this example, we chose `my_user_database` as our unique identifier. CASino will search for users in the `users` table. The column `username` contains the usernames whereas `password` contains the corresponding passwords. The authenticator supports [Unix crypt style](http://www.kernel.org/doc/man-pages/online/pages/man3/crypt.3.html#NOTES) stored passwords. Supported algorithms are salted MD5, salted SHA256 and SHA512, as well as the recommended bcrypt algorithm.
 
 ### Parameters
 These are the default parameters, that you can overwrite within the `config/cas.yml`:
@@ -141,7 +141,7 @@ two_factor_authenticator:
 
      `lifetime: [integer]`
 
-     Specifies how long (in seconds) the ticket-granting ticket should live before it expires. This is, how long the user can stay loggedin to your SSO before he has to relogin to your CASino installation.
+     Specifies how long (in seconds) the ticket-granting ticket should live before it expires. This is, how long the user can stay logged in to your SSO before he has to relogin to your CASino installation.
 
    * ##### Lifetime (long-term)
 
@@ -151,19 +151,19 @@ two_factor_authenticator:
 
 * #### Service ticket
 
-  Service tickets are used by service's as an identifier of the Single-sign on session. A service ticket is only valid for one validation request. This is why services have to store the result in their own session.
+  Service tickets are used by services as an identifier of the Single-sign on session. A service ticket is only valid for one validation request. This is why services have to store the result in their own session.
 
    * ##### Lifetime (unconsumed)
 
      `lifetime_unconsumed: [integer]`
 
-     Specifies how much time (in seconds) the service may have for it's validation request.
+     Specifies how much time (in seconds) the service may have for its validation request.
 
    * ##### Lifetime (consumed)
 
      `lifetime_consumed: [integer]`
 
-     Specifies how long (in seconds) the user should stayed loggedin in services using this SSO. After this period, SSO will send out a single sign-out notification to the service. Not all services handle this notifications!
+     Specifies how long (in seconds) the user should stayed logged in to services using this SSO. After this period, SSO will send out a single sign-out notification to the service. Not all services handle this notification!
 
    * ##### Single sign-out notification
 
@@ -193,7 +193,7 @@ two_factor_authenticator:
 
      `lifetime_inactive: [integer]`
 
-     Specifies how much time the user has to initially validate and activate the two-factor authenticator.
+     Specifies how much time (in seconds) the user has to initially validate and activate the two-factor authenticator.
 
    * ##### Drift
 
