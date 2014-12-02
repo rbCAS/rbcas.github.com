@@ -7,7 +7,7 @@ next_section: contributing
 
 ## Ruby
 
-[Rack-CAS](https://github.com/biola/rack-cas) is a simple Rack middleware to perform CAS client authentication. It works with any Rack-compatible framework such as Rails or Sinatra. Please check the [offical documentation](https://github.com/biola/rack-cas#readme) to learn how to use Rack CAS.
+[Rack-CAS](https://github.com/biola/rack-cas) is a simple Rack middleware to perform CAS client authentication. It works with any Rack-compatible framework such as Rails or Sinatra. Please check the [offical documentation](https://github.com/biola/rack-cas#readme) to learn how to use Rack-CAS.
 
 ## Java
 
