@@ -47,7 +47,7 @@ Then continue to the next chapters and learn how to configure and deploy your CA
 
 ### 1. Create a Ruby on Rails application
 
-Make sure you installed Ruby on Rails 3.2.x (for example through `gem install rails -v '~> 3.2.11'`).
+Make sure you installed Ruby on Rails 4.1.x or 4.2.x (for example through `gem install rails -v '~> 4.2.5'`).
 
 {% highlight bash %}
 rails new my-casino --skip-test-unit --skip-bundle
