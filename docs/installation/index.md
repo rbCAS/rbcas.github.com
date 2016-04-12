@@ -26,7 +26,7 @@ Once you downloaded the latest version follow these simple steps to get a basic 
 {% highlight bash %}
 cd CASinoApp
 gem install bundler
-./script/install sqlite # choose either sqlite (not recommended), postgres or mysql
+./bin/install sqlite # choose either sqlite (not recommended), postgres or mysql
 {% endhighlight %}
 
 This will generate a basic configuration. You'll learn how to change the configuration in the next chapter.
